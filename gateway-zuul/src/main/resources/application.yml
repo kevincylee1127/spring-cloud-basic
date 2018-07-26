@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: gateway
+zuul:
+  ignoredServices: '*'
+  stripPrefix: true
+  routes:
+    api:
+      path: /api/**
+      serviceId: api
+    page:
+      path: /git/**
+      url: https://github.com/kevincylee1127
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 3000
+  MaxTotalHttpConnections: 50
+  MaxConnectionsPerHost: 10
