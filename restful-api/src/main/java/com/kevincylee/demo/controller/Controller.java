@@ -35,7 +35,7 @@ public class Controller {
 	UserService service;
 
 	@GetMapping("/restful")
-	private User get(HttpServletRequest request, @RequestParam(required = false) Integer id) {
+	private User get(HttpServletRequest request, @RequestParam Integer id) {
 		logger.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
 		User user = service.findById(id);
 		return user;

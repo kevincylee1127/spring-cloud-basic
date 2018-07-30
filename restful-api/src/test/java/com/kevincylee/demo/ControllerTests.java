@@ -23,7 +23,7 @@ import com.kevincylee.demo.service.UserService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(Controller.class)
-public class RestFulApiApplicationTests {
+public class ControllerTests {
 
 	@Autowired
 	private MockMvc mockMvc;
